@@ -461,7 +461,8 @@ struct ContentView: View {
         Task {
             do {
                 // Replace YOUR_API_KEY_HERE
-                let apiKey = "API_KEY_HERE")!
+                let apiKey = "YOUR_API_HERE"
+                let url = URL(string: "https://api.openai.com/v1/chat/completions")!
                 var request = URLRequest(url: url)
                 request.httpMethod = "POST"
                 request.addValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
